@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Tp_stand_Tag_Lib:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Tp_stand_Tag_Lib</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Tp_stand_Tag_Lib-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Tp_stand_Tag_Lib:war exploded" />
+    </root>
+  </artifact>
+</component>
