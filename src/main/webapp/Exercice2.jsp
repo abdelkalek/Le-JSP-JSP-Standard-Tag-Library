@@ -11,8 +11,13 @@
 <html>
 <head>
     <title>Jsp page </title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
-<body>
+<body class="container ">
+<div class="container-fluid mt-4">
+
+
 <c:forEach var="n" begin="2" end="30" step="1"><%-- les nombre de 2 a 30 --%>
     <c:set var="est_premier" value='True'></c:set> <%--declaration de variable boolean  --%>
     <%-- verifier si de nombre n est ne pas premier --%>
@@ -25,15 +30,21 @@
     <%-- Affichage de resultat pour chaque nombre  --%>
     <c:choose>
         <c:when test="${est_premier}">
-            <c:out value="Le nombre ${n} est premier"></c:out><br>
+            <div class="alert alert-success" role="alert">
+                <c:out value="${n}   nombre  premier"></c:out><br>
+            </div>
         </c:when>
         <c:otherwise>
-            <c:out value=" ${n} Ce  n'est pas un nombre premier"></c:out><br>
+            <div class="alert alert-warning" role="alert">
+                <c:out value=" ${n}   Cen'est pas un nombre premier"></c:out><br>
+            </div>
+
         </c:otherwise>
     </c:choose>
     <%-- Fin - Affichage de resultat pour chaque nombre  --%>
 
 </c:forEach>
+</div>
 </body>
 </html>
 
